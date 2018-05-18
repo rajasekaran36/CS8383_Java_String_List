@@ -34,14 +34,26 @@ public void displayList(){
 	for(String element:listOfStrings)
 		System.out.println(element);
 }
-public boolean searchString(String aString){
+public void searchString(String aString){
 	int cur_pos = 0;
+	int foundAt = -1;
 	for(String element:listOfStrings){
 		if(element.equalsIgnoreCase(aString))
-			System.out.println("Your string"+aString+" found at position "+cur_pos);
+			foundAt = cur_pos;
 		else
 			cur_pos++;
 	}
-	return true;
+	if(foundAt>=0)
+		System.out.println("Your string"+aString+" found at position "+cur_pos);
+	else
+		System.out.println("String not found in the list");
+}
+public void displayStringsBeginWith(String aLetter){
+	
+	for (String element:listOfStrings){
+		String firstLetter  = String.valueOf(element.charAt(0));
+		if(aLetter.equals(firstLetter))
+			System.out.println(element);
+	}
 }
 }

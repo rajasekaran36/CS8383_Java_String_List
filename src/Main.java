@@ -7,8 +7,10 @@ public class Main {
 		sl.addString("Hai");
 		sl.addString("Joo");
 		sl.addString("Foo");
-		sl.displayList();
+		//sl.displayList();
 		sl.insertStringAt(2, "XXX");
-		sl.displayList();
+		//sl.displayList();
+		sl.searchString("99");
+		sl.displayStringsBeginWith("H");
 	}
 }
